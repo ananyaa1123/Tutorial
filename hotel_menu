@@ -1,0 +1,35 @@
+menu={
+    'Pizza': 625,
+    'Pasta': 675,
+    'Burger': 425,
+    'Coffee': 380,
+}
+#print(menu)
+
+print("Welcome to my Pluto Restuarent:")
+print("Pizza: 625\nPasta: 675\nBurger: 425\nCoffee: 380")
+
+order_total=0
+
+item1= input("Enter the name of item you want to order = ")
+
+if item1 in menu:
+    order_total += menu[item1]
+    print(f"Your item {item1} has been added")
+
+else:
+    print("Ordered item is not available yet!")
+
+choice = input("Do you want anything else? (Yes/ No)")
+
+while(choice== "Yes"):
+    item2= input("Enter what you want next: ")
+    if item2 in menu:
+        order_total += menu[item2]
+        print(f"Your item {item2} has been added")
+    else:
+        print("Ordered item is not available yet!")
+    
+    choice = input("Do you want anything else? (Yes/ No)")
+
+print (f"Your total is: {order_total}")
